@@ -1,0 +1,50 @@
+<section class="p-4">
+  <form [formGroup]="userForm">
+  <h5>User Management</h5>
+  <br>
+  <span class="mt-4">Credential details</span>
+  <div class="mt-4 cred-wrapper p-3">
+
+    <div class="input-group input-group-sm input-body mb-3">
+      <label class="control-label col-xs-3 me-3">*User Name</label>
+      <input type="text" formControlName="username" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+    </div>
+    <div class="input-group input-group-sm input-body mb-3">
+      <label class="control-label col-xs-3 me-3">*User Role</label>
+      <input type="text"
+             class="form-control "
+             placeholder="Pick one"
+             formControlName="userrole"
+             aria-label="Number"
+             matInput
+             [formControl]="myControl"
+             [matAutocomplete]="auto">
+      <mat-autocomplete #auto="matAutocomplete">
+        <mat-option *ngFor="let option of options" [value]="option">
+          {{option}}
+        </mat-option>
+      </mat-autocomplete>
+    </div>
+  </div>
+  <br>
+  <span class="mt-4">Personal details</span>
+  <div class="mt-4 cred-wrapper p-3">
+    <div class="input-group input-group-sm input-body mb-3">
+      <label class="control-label col-xs-3 me-3">*First Name</label>
+      <input type="text" class="form-control " formControlName="firstname" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+    </div>
+    <div class="input-group input-group-sm input-body mb-3">
+      <label class="control-label col-xs-3 me-3">*Last Name</label>
+      <input type="text" class="form-control " formControlName="lastname" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+    </div>
+    <div class="input-group input-group-sm input-body mb-3">
+      <label class="control-label col-xs-3 me-3">*Password</label>
+      <input type="password" class="form-control " formControlName="password" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+    </div>
+  </div>
+  <div class="mt-4 d-flex justify-content-end">
+    <button type="button" class="btn btn-secondary btn-sm" (click)="saveUser()">Request Initiate</button>&nbsp;&nbsp;
+    <button type="button" class="btn btn-secondary btn-sm">Back</button>
+  </div>
+  </form>
+</section>

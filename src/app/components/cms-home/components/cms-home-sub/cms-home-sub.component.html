@@ -1,0 +1,22 @@
+<section class="row p-2">
+  <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3 tab-main mt-4" *ngFor="let heads of tabheads">
+    <div class="tab-header p-2">
+      <span>{{heads.title}}</span>
+    </div>
+    <div class="tab-body">
+      <mat-accordion class="d-flex flex-column" *ngFor="let lists of heads.configs">
+        <mat-expansion-panel hideToggle (opened)="panelOpenState = true;handleOpened(lists.id)"
+                             (closed)="panelOpenState = false"  [expanded]="lists.id === currentOpenedItemId">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              {{lists.title}}
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <ul *ngFor="let sublists of lists.subtitles" class="ms-4">
+            <li><a href="#" style="text-decoration: none" [routerLink]="'./'+sublists.route">{{sublists.title}}</a></li>
+          </ul>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </div>
+  </div>
+</section>

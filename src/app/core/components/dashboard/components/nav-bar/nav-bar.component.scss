@@ -1,0 +1,45 @@
+.navbar{
+  height: 50px;
+}
+.nav-logo{
+  height: 40px;
+}
+
+.bread-crumb{
+  background: black;
+  height: 23px;
+  color: white;
+  font-size: 14px;
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+    'FILL' 1,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
+}
+
+.icon-text {
+  display: flex;
+  align-items: center;
+}
+
+.module-list{
+  border-radius: 20px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+}
+
+.base-color{
+ color: #d02b31;
+}
+
+.base-hover-color:hover{
+  color: #d02b31;
+}
+
+
+
+
